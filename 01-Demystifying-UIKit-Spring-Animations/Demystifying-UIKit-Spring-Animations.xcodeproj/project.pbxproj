@@ -1,0 +1,276 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBC5496D20DF0CF1004BF4D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5496C20DF0CF1004BF4D1 /* AppDelegate.swift */; };
+		CBC5496F20DF0CF2004BF4D1 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5496E20DF0CF2004BF4D1 /* PreviewViewController.swift */; };
+		CBC5497420DF0CF3004BF4D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC5497320DF0CF3004BF4D1 /* Assets.xcassets */; };
+		CBC5498620DFE2D5004BF4D1 /* PictureInPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5498420DFE2D4004BF4D1 /* PictureInPictureView.swift */; };
+		CBC5498720DFE2D5004BF4D1 /* EndpointIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5498520DFE2D5004BF4D1 /* EndpointIndicatorView.swift */; };
+		CBC5498920DFE2ED004BF4D1 /* PanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5498820DFE2ED004BF4D1 /* PanGestureRecognizer.swift */; };
+		CBC5499120DFF25D004BF4D1 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC5499020DFF25D004BF4D1 /* Storyboard.storyboard */; };
+		CBC5499320E009E6004BF4D1 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5499220E009E6004BF4D1 /* GraphView.swift */; };
+		CBC5499520E009EE004BF4D1 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5499420E009EE004BF4D1 /* ConfigurationViewController.swift */; };
+		CBC5499B20E00C57004BF4D1 /* CGVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5499720E00C57004BF4D1 /* CGVector.swift */; };
+		CBC5499C20E00C57004BF4D1 /* DampedHarmonicSpring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5499820E00C57004BF4D1 /* DampedHarmonicSpring.swift */; };
+		CBC5499D20E00C57004BF4D1 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC5499920E00C57004BF4D1 /* CGPoint.swift */; };
+		CBC549A820E02F69004BF4D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC5497520DF0CF3004BF4D1 /* LaunchScreen.storyboard */; };
+		CBC549AC20E03997004BF4D1 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC549AB20E03997004BF4D1 /* CGRect.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CB41FEF720E2BE5900191F7D /* HighRelativeVelocity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HighRelativeVelocity@2x.png"; sourceTree = "<group>"; };
+		CB55BAFB20E28F730078CED6 /* TimingFunctions@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TimingFunctions@2x.png"; sourceTree = "<group>"; };
+		CB55BAFC20E28F790078CED6 /* EquationsOfMotion@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EquationsOfMotion@2x.png"; sourceTree = "<group>"; };
+		CBC5496920DF0CF1004BF4D1 /* Demystifying-UIKit-Spring-Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demystifying-UIKit-Spring-Animations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC5496C20DF0CF1004BF4D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBC5496E20DF0CF2004BF4D1 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		CBC5497320DF0CF3004BF4D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBC5497620DF0CF3004BF4D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBC5497820DF0CF3004BF4D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC5497F20DF0D2C004BF4D1 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		CBC5498020DF1FEA004BF4D1 /* DampedHarmonicSpring.gcx */ = {isa = PBXFileReference; lastKnownFileType = file; path = DampedHarmonicSpring.gcx; sourceTree = "<group>"; };
+		CBC5498420DFE2D4004BF4D1 /* PictureInPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureInPictureView.swift; sourceTree = "<group>"; };
+		CBC5498520DFE2D5004BF4D1 /* EndpointIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointIndicatorView.swift; sourceTree = "<group>"; };
+		CBC5498820DFE2ED004BF4D1 /* PanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanGestureRecognizer.swift; sourceTree = "<group>"; };
+		CBC5499020DFF25D004BF4D1 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		CBC5499220E009E6004BF4D1 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		CBC5499420E009EE004BF4D1 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		CBC5499720E00C57004BF4D1 /* CGVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGVector.swift; path = ../Shared/CGVector.swift; sourceTree = "<group>"; };
+		CBC5499820E00C57004BF4D1 /* DampedHarmonicSpring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DampedHarmonicSpring.swift; path = ../Shared/DampedHarmonicSpring.swift; sourceTree = "<group>"; };
+		CBC5499920E00C57004BF4D1 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGPoint.swift; path = ../Shared/CGPoint.swift; sourceTree = "<group>"; };
+		CBC549AB20E03997004BF4D1 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRect.swift; path = ../Shared/CGRect.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBC5496620DF0CF1004BF4D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB55BAFA20E28F2C0078CED6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CBC5498020DF1FEA004BF4D1 /* DampedHarmonicSpring.gcx */,
+				CB55BAFC20E28F790078CED6 /* EquationsOfMotion@2x.png */,
+				CB55BAFB20E28F730078CED6 /* TimingFunctions@2x.png */,
+				CB41FEF720E2BE5900191F7D /* HighRelativeVelocity@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CBC5496020DF0CF1004BF4D1 = {
+			isa = PBXGroup;
+			children = (
+				CBC5497F20DF0D2C004BF4D1 /* Readme.md */,
+				CBC5496B20DF0CF1004BF4D1 /* Sources */,
+				CBC5499620E00C39004BF4D1 /* Shared Sources */,
+				CB55BAFA20E28F2C0078CED6 /* Resources */,
+				CBC5498120DFE203004BF4D1 /* Supporting Files */,
+				CBC5496A20DF0CF1004BF4D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBC5496A20DF0CF1004BF4D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBC5496920DF0CF1004BF4D1 /* Demystifying-UIKit-Spring-Animations.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBC5496B20DF0CF1004BF4D1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CBC5496C20DF0CF1004BF4D1 /* AppDelegate.swift */,
+				CBC5499420E009EE004BF4D1 /* ConfigurationViewController.swift */,
+				CBC5496E20DF0CF2004BF4D1 /* PreviewViewController.swift */,
+				CBC5499220E009E6004BF4D1 /* GraphView.swift */,
+				CBC5498520DFE2D5004BF4D1 /* EndpointIndicatorView.swift */,
+				CBC5498420DFE2D4004BF4D1 /* PictureInPictureView.swift */,
+				CBC5498820DFE2ED004BF4D1 /* PanGestureRecognizer.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CBC5498120DFE203004BF4D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBC5497820DF0CF3004BF4D1 /* Info.plist */,
+				CBC5497520DF0CF3004BF4D1 /* LaunchScreen.storyboard */,
+				CBC5499020DFF25D004BF4D1 /* Storyboard.storyboard */,
+				CBC5497320DF0CF3004BF4D1 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBC5499620E00C39004BF4D1 /* Shared Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CBC5499720E00C57004BF4D1 /* CGVector.swift */,
+				CBC5499920E00C57004BF4D1 /* CGPoint.swift */,
+				CBC549AB20E03997004BF4D1 /* CGRect.swift */,
+				CBC5499820E00C57004BF4D1 /* DampedHarmonicSpring.swift */,
+			);
+			name = "Shared Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBC5496820DF0CF1004BF4D1 /* Demystifying-UIKit-Spring-Animations */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBC5497B20DF0CF3004BF4D1 /* Build configuration list for PBXNativeTarget "Demystifying-UIKit-Spring-Animations" */;
+			buildPhases = (
+				CBC5496520DF0CF1004BF4D1 /* Sources */,
+				CBC5496620DF0CF1004BF4D1 /* Frameworks */,
+				CBC5496720DF0CF1004BF4D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Demystifying-UIKit-Spring-Animations";
+			productName = "Demystifying-UIKit-Spring-Animations";
+			productReference = CBC5496920DF0CF1004BF4D1 /* Demystifying-UIKit-Spring-Animations.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBC5496120DF0CF1004BF4D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Christian Schnorr";
+				TargetAttributes = {
+					CBC5496820DF0CF1004BF4D1 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = CBC5496420DF0CF1004BF4D1 /* Build configuration list for PBXProject "Demystifying-UIKit-Spring-Animations" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBC5496020DF0CF1004BF4D1;
+			productRefGroup = CBC5496A20DF0CF1004BF4D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBC5496820DF0CF1004BF4D1 /* Demystifying-UIKit-Spring-Animations */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBC5496720DF0CF1004BF4D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC5497420DF0CF3004BF4D1 /* Assets.xcassets in Resources */,
+				CBC549A820E02F69004BF4D1 /* LaunchScreen.storyboard in Resources */,
+				CBC5499120DFF25D004BF4D1 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBC5496520DF0CF1004BF4D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC5496D20DF0CF1004BF4D1 /* AppDelegate.swift in Sources */,
+				CBC5499520E009EE004BF4D1 /* ConfigurationViewController.swift in Sources */,
+				CBC5496F20DF0CF2004BF4D1 /* PreviewViewController.swift in Sources */,
+				CBC5499320E009E6004BF4D1 /* GraphView.swift in Sources */,
+				CBC5498720DFE2D5004BF4D1 /* EndpointIndicatorView.swift in Sources */,
+				CBC5498620DFE2D5004BF4D1 /* PictureInPictureView.swift in Sources */,
+				CBC5498920DFE2ED004BF4D1 /* PanGestureRecognizer.swift in Sources */,
+				CBC5499B20E00C57004BF4D1 /* CGVector.swift in Sources */,
+				CBC5499D20E00C57004BF4D1 /* CGPoint.swift in Sources */,
+				CBC549AC20E03997004BF4D1 /* CGRect.swift in Sources */,
+				CBC5499C20E00C57004BF4D1 /* DampedHarmonicSpring.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CBC5497520DF0CF3004BF4D1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBC5497620DF0CF3004BF4D1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBC5497920DF0CF3004BF4D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CBC5497C20DF0CF3004BF4D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.jenox.Demystifying-UIKit-Spring-Animations";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBC5496420DF0CF1004BF4D1 /* Build configuration list for PBXProject "Demystifying-UIKit-Spring-Animations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC5497920DF0CF3004BF4D1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CBC5497B20DF0CF3004BF4D1 /* Build configuration list for PBXNativeTarget "Demystifying-UIKit-Spring-Animations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC5497C20DF0CF3004BF4D1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBC5496120DF0CF1004BF4D1 /* Project object */;
+}
