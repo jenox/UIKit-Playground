@@ -4,4 +4,7 @@
    <FileRef
       location = "group:01-Demystifying-UIKit-Spring-Animations/Demystifying-UIKit-Spring-Animations.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:02-Gestures-In-Fluid-Interfaces/Gestures-In-Fluid-Interfaces.xcodeproj">
+   </FileRef>
 </Workspace>

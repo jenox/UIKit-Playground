@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB0556A620D05B8A00095934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0556A520D05B8A00095934 /* AppDelegate.swift */; };
+		CB0556A820D05B8A00095934 /* FacetimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0556A720D05B8A00095934 /* FacetimeViewController.swift */; };
+		CB0556AD20D05B8B00095934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB0556AC20D05B8B00095934 /* Assets.xcassets */; };
+		CB0556B020D05B8B00095934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0556AE20D05B8B00095934 /* LaunchScreen.storyboard */; };
+		CB51BDF120F23B9B00A40020 /* UIGestureRecognizer+Projection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB51BDF020F23B9B00A40020 /* UIGestureRecognizer+Projection.swift */; };
+		CB733CD020D1413C00FDEC83 /* EndpointIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB733CCF20D1413C00FDEC83 /* EndpointIndicatorView.swift */; };
+		CB733CD220D1414100FDEC83 /* PictureInPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB733CD120D1414100FDEC83 /* PictureInPictureView.swift */; };
+		CBB6FE3820DAA3110099567C /* PanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6FE3720DAA3110099567C /* PanGestureRecognizer.swift */; };
+		CBC549A420E00C8A004BF4D1 /* CGVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC549A020E00C8A004BF4D1 /* CGVector.swift */; };
+		CBC549A520E00C8A004BF4D1 /* DampedHarmonicSpring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC549A120E00C8A004BF4D1 /* DampedHarmonicSpring.swift */; };
+		CBC549A620E00C8A004BF4D1 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC549A220E00C8A004BF4D1 /* CGPoint.swift */; };
+		CBD488E820E19C0200536F06 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD488E720E19C0200536F06 /* CGRect.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CB0556A220D05B8A00095934 /* Gestures-In-Fluid-Interfaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gestures-In-Fluid-Interfaces.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB0556A520D05B8A00095934 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB0556A720D05B8A00095934 /* FacetimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacetimeViewController.swift; sourceTree = "<group>"; };
+		CB0556AC20D05B8B00095934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB0556AF20D05B8B00095934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB0556B120D05B8B00095934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB51BDF020F23B9B00A40020 /* UIGestureRecognizer+Projection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIGestureRecognizer+Projection.swift"; path = "../Shared/UIGestureRecognizer+Projection.swift"; sourceTree = "<group>"; };
+		CB733CCF20D1413C00FDEC83 /* EndpointIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointIndicatorView.swift; sourceTree = "<group>"; };
+		CB733CD120D1414100FDEC83 /* PictureInPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureInPictureView.swift; sourceTree = "<group>"; };
+		CBA78ED520DBA4D3007729A0 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		CBB6FE3720DAA3110099567C /* PanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGestureRecognizer.swift; sourceTree = "<group>"; };
+		CBC549A020E00C8A004BF4D1 /* CGVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGVector.swift; path = ../Shared/CGVector.swift; sourceTree = "<group>"; };
+		CBC549A120E00C8A004BF4D1 /* DampedHarmonicSpring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DampedHarmonicSpring.swift; path = ../Shared/DampedHarmonicSpring.swift; sourceTree = "<group>"; };
+		CBC549A220E00C8A004BF4D1 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGPoint.swift; path = ../Shared/CGPoint.swift; sourceTree = "<group>"; };
+		CBD488E720E19C0200536F06 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGRect.swift; path = ../Shared/CGRect.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB05569F20D05B8A00095934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB05569920D05B8A00095934 = {
+			isa = PBXGroup;
+			children = (
+				CBA78ED520DBA4D3007729A0 /* Readme.md */,
+				CB0556A420D05B8A00095934 /* Sources */,
+				CBC5499F20E00C72004BF4D1 /* Shared Sources */,
+				CBB6FE3620DA892B0099567C /* Resources */,
+				CB0556A320D05B8A00095934 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB0556A320D05B8A00095934 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB0556A220D05B8A00095934 /* Gestures-In-Fluid-Interfaces.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB0556A420D05B8A00095934 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CB0556A520D05B8A00095934 /* AppDelegate.swift */,
+				CB0556A720D05B8A00095934 /* FacetimeViewController.swift */,
+				CB733CCF20D1413C00FDEC83 /* EndpointIndicatorView.swift */,
+				CB733CD120D1414100FDEC83 /* PictureInPictureView.swift */,
+				CBB6FE3720DAA3110099567C /* PanGestureRecognizer.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CBB6FE3620DA892B0099567C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CB0556B120D05B8B00095934 /* Info.plist */,
+				CB0556AE20D05B8B00095934 /* LaunchScreen.storyboard */,
+				CB0556AC20D05B8B00095934 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CBC5499F20E00C72004BF4D1 /* Shared Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CBC549A020E00C8A004BF4D1 /* CGVector.swift */,
+				CBC549A220E00C8A004BF4D1 /* CGPoint.swift */,
+				CBD488E720E19C0200536F06 /* CGRect.swift */,
+				CBC549A120E00C8A004BF4D1 /* DampedHarmonicSpring.swift */,
+				CB51BDF020F23B9B00A40020 /* UIGestureRecognizer+Projection.swift */,
+			);
+			name = "Shared Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB0556A120D05B8A00095934 /* Gestures-In-Fluid-Interfaces */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB0556B420D05B8B00095934 /* Build configuration list for PBXNativeTarget "Gestures-In-Fluid-Interfaces" */;
+			buildPhases = (
+				CB05569E20D05B8A00095934 /* Sources */,
+				CB05569F20D05B8A00095934 /* Frameworks */,
+				CB0556A020D05B8A00095934 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gestures-In-Fluid-Interfaces";
+			productName = Animations;
+			productReference = CB0556A220D05B8A00095934 /* Gestures-In-Fluid-Interfaces.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB05569A20D05B8A00095934 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Christian Schnorr";
+				TargetAttributes = {
+					CB0556A120D05B8A00095934 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = CB05569D20D05B8A00095934 /* Build configuration list for PBXProject "Gestures-In-Fluid-Interfaces" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB05569920D05B8A00095934;
+			productRefGroup = CB0556A320D05B8A00095934 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB0556A120D05B8A00095934 /* Gestures-In-Fluid-Interfaces */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB0556A020D05B8A00095934 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB0556AD20D05B8B00095934 /* Assets.xcassets in Resources */,
+				CB0556B020D05B8B00095934 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB05569E20D05B8A00095934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB0556A620D05B8A00095934 /* AppDelegate.swift in Sources */,
+				CB0556A820D05B8A00095934 /* FacetimeViewController.swift in Sources */,
+				CB733CD020D1413C00FDEC83 /* EndpointIndicatorView.swift in Sources */,
+				CB733CD220D1414100FDEC83 /* PictureInPictureView.swift in Sources */,
+				CBB6FE3820DAA3110099567C /* PanGestureRecognizer.swift in Sources */,
+				CBC549A420E00C8A004BF4D1 /* CGVector.swift in Sources */,
+				CBC549A620E00C8A004BF4D1 /* CGPoint.swift in Sources */,
+				CBD488E820E19C0200536F06 /* CGRect.swift in Sources */,
+				CBC549A520E00C8A004BF4D1 /* DampedHarmonicSpring.swift in Sources */,
+				CB51BDF120F23B9B00A40020 /* UIGestureRecognizer+Projection.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CB0556AE20D05B8B00095934 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB0556AF20D05B8B00095934 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB0556B220D05B8B00095934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CB0556B320D05B8B00095934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		CB0556B520D05B8B00095934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.jenox.Gestures-In-Fluid-Interfaces";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CB0556B620D05B8B00095934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.jenox.Gestures-In-Fluid-Interfaces";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB05569D20D05B8A00095934 /* Build configuration list for PBXProject "Gestures-In-Fluid-Interfaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB0556B220D05B8B00095934 /* Debug */,
+				CB0556B320D05B8B00095934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB0556B420D05B8B00095934 /* Build configuration list for PBXNativeTarget "Gestures-In-Fluid-Interfaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB0556B520D05B8B00095934 /* Debug */,
+				CB0556B620D05B8B00095934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB05569A20D05B8A00095934 /* Project object */;
+}
