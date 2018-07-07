@@ -25,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		CB41FEF720E2BE5900191F7D /* HighRelativeVelocity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HighRelativeVelocity@2x.png"; sourceTree = "<group>"; };
+		CB44946320F07D3E0059355F /* StartFromEquilibrium@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StartFromEquilibrium@2x.png"; sourceTree = "<group>"; };
 		CB55BAFB20E28F730078CED6 /* TimingFunctions@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TimingFunctions@2x.png"; sourceTree = "<group>"; };
 		CB55BAFC20E28F790078CED6 /* EquationsOfMotion@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EquationsOfMotion@2x.png"; sourceTree = "<group>"; };
 		CBC5496920DF0CF1004BF4D1 /* Demystifying-UIKit-Spring-Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demystifying-UIKit-Spring-Animations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +65,7 @@
 				CBC5498020DF1FEA004BF4D1 /* DampedHarmonicSpring.gcx */,
 				CB55BAFC20E28F790078CED6 /* EquationsOfMotion@2x.png */,
 				CB55BAFB20E28F730078CED6 /* TimingFunctions@2x.png */,
+				CB44946320F07D3E0059355F /* StartFromEquilibrium@2x.png */,
 				CB41FEF720E2BE5900191F7D /* HighRelativeVelocity@2x.png */,
 			);
 			path = Resources;
