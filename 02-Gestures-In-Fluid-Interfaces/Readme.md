@@ -11,18 +11,18 @@ Let us take a close look at a gesture we use every day: changing between pages o
 
 If we were to take only the current scroll position into account and animate to whatever page is closest when the user releases his finger, one would be forced to swipe at least halfway over. On larger screens like on the iPad it becomes obvious that this is rather unwieldy.
 
-Obviously we need more information than just the current scroll position in order to pick the right endpoint; more information about how we got there, so that we can make a reasonable assumption on how the user would have continued the motion. An natural thing to look at is the momentum of the gesture, and that's something `UIPanGestureRecognizer` already gives us out of the box. Note that it should probably to be a combination of position and velocity: The closer one is to the halfway point when releasing one's finger, the less velocity should be required to move it past that point. But just how much velocity is required to cover the remaining ground?
+Obviously we need more information than just the current scroll position in order to pick the right endpoint; more information about how we got there, so that we can make a reasonable assumption on how the user would have continued the motion. A natural thing to look at is the momentum of the gesture, and that's something `UIPanGestureRecognizer` already gives us out of the box. Note that it should probably to be a combination of position and velocity: The closer one's finger is to the halfway point when lifted off the screen, the less velocity should be required to move content past that point. But just how much velocity is required to cover the remaining ground?
 
 
 ## Projection
 
-Turns out we already have a very good intuition for how far that. We move content around the screen every day, most prominently perhaps content embedded in `UIScrollView`s. Everybody has a feeling for how fast one needs to flick to scroll a certain distance, and this application is no different: It's very reasonable to push content such that it comes to rest at (or close to) the position where we want it to be.
+Turns out we already have a very good intuition for that. We move content around the screen every day, most prominently perhaps content embedded in `UIScrollView`s. Everybody has a feeling for how fast one needs to flick across the screen to scroll a certain distance, and this application is no different: It's very reasonable to push content such that it would come to rest at (or close to) the position where we want it to be.
 
-When a standard scroll view decelerates, the velocity with which it moves decreases exponentially over time. The default deceleration rate is `λ = 0.998`, meaning that the scroll view loses 0.2% of its velocity per millisecond: `v(t) = v_0·λ^(-1000t)`
+When a standard scroll view decelerates, the velocity with which it moves decreases exponentially over time. The default deceleration rate is `λ = 0.998`, meaning that the scroll view loses 0.2% of its velocity per millisecond. For any point in time we can compute the remaining velocity as `v(t) = v_0·λ^(-1000t)`, where `v_0` is the initial velocity at `t = 0`.
 
 The distance traveled is the area under the curve in a velocity-time-graph, thus the distance traveled until the content comes to rest is the integral of the velocity from zero to infinity. Luckily this integral converges and we find `s(t) = -0.001 · v_0 / log(λ)`. In the WWDC session ["Designing Fluid Interfaces"][Designing Fluid Interfaces], Apple refers to the process of finding the position at which some object comes to rest as _projection_. They provided a different formula to calculate it though!
 
-```
+```swift
 // Distance travelled after decelerating to zero velocity at a constant rate
 func project(initialVelocity: Float, decelerationRate: Float) -> Float {
     return (initialVelocity / 1000.0) * decelerationRate / (1.0 - decelerationRate)
@@ -30,11 +30,11 @@ func project(initialVelocity: Float, decelerationRate: Float) -> Float {
 ```
 Snippet: "Projection as presented in ["Designing Fluid Interfaces"][Designing Fluid Interfaces]."
 
-This one I can't explain to you where it comes from. I only know that Facebook Pop [uses this equation, too][Facebook Implementation]. But they also assume an exponentially decaying velocity — and these equations for position and velocity simply don't fit together. Differentiating Facebook's equation for the distance traveled with respect to time, which would explain the projection formula above, doesn't even give the specified initial velocity for `t = 0`.
+This one I can't explain to you where it comes from. I only know that Facebook Pop [uses this equation as well][Facebook Implementation]. But Pop, too, assumes an exponentially decaying velocity — and these equations for position and velocity simply don't fit together. Differentiating Pop's equation for the distance traveled with respect to time, which would explain the projection formula above, doesn't even yield the specified initial velocity for `t = 0`.
 
 For common deceleration rates the two equations for projection [differ by less than a percent][Projection Comparison] though, so I'd suggest using the one you can reason about:
 
-```
+```swift
 extension UIGestureRecognizer {
     public static func project(_ velocity: CGFloat, onto position: CGFloat, decelerationRate: UIScrollView.DecelerationRate = .normal) -> CGFloat {
         return position - 0.001 * velocity / log(decelerationRate.rawValue)
@@ -43,20 +43,20 @@ extension UIGestureRecognizer {
 ```
 Snippet: "Projection assuming an exponentially decaying velocity."
 
-Note that the concept of projection is not limited to translational velocities in any way. It could also be applied to, say, the angular velocity from a rotation gesture.
+Note that the concept of projection is not limited to translational velocities in any way. It could also be applied to, say, the angular velocity of a rotation gesture.
 
 
 ## Choosing the Right Endpoint
 
 Now that we have projection all figured out, let's turn our attention back towards choosing the endpoint that matches the user's intent. For one-dimensional interactions like paging on the home screen and open/closed-drawers like notification center, the process is fairly trivial: calculate the projected position and pick whatever endpoint is closest to that position.
 
-Taking it to more dimensions is where things get a little tricky. We'll discuss a two-dimensional interaction here, and that's already difficult enough. So difficult in fact, that no one seems to really have it figured out: The system PIP on the Mac is horrendous — it doesn't respect the momentum at all. On the iPad it does, but the flicking the PIP still feels very clunky. Better implementations include the overlay in FaceTime and Twitch on iOS, but even they don't quite feel right.
+Taking it to more dimensions is where things get a little tricky. We'll discuss a two-dimensional interaction here, and that's already difficult enough. So difficult in fact, that no one seems to really have it figured out: The system PIP on the Mac is horrendous — it doesn't respect the momentum at all. On the iPad it does, but flicking the PIP still feels very clunky. Better implementations include the overlay in FaceTime and Twitch on iOS, but even they don't quite feel right.
 
-A naïve approach would be treating each dimension of the gesture separately, in this case the horizontal and vertical position. That's what FaceTime and Twitch appear to be doing, but there's a problem with that: Just like we are used to giving content a quick flick when trying to scroll to the very top or bottom of a list, we may do the same to move the overlay to the top or bottom edge. However, our gestures aren't 100% precise and almost always have some momentum in a secondary unintended dimension, too. The problem with this is that very little directed momentum is enough to move past the halfway point along a given axis, and the unintended momentum in a secondary dimension is often enough. Therefore when treating each dimension separately, the overlay often swaps sides contrary to the users intent.
+A naïve approach would be treating each dimension of the gesture separately, in this case the horizontal and vertical position. That's what FaceTime and Twitch appear to be doing, but there's a problem with that: Just like we are used to giving content a quick flick when trying to scroll to the very top or bottom of a list, we may do the same to move the overlay to the top or bottom edge. However, our gestures aren't 100% accurate and almost always include some momentum in a secondary, unintended dimension. The problem with this is that very little directed momentum is enough to move past the halfway point along a given axis, and the unintended momentum in a secondary dimension is often enough. Therefore when treating each dimension separately, the overlay often swaps sides contrary to the user's intent.
 
 A potential solution I've come up with is instead treating the gesture as a whole: It has momentum along a primary axis, and if the momentum along the other axis is much smaller it was probably unintended and should not have the same weight when determining the endpoint of the gesture:
 
-```
+```swift
 func intendedEndpoint(with velocity: CGVector, from currentPosition: CGPoint) -> Endpoint {
     var velocity = velocity
 
