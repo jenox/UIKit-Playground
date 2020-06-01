@@ -101,7 +101,7 @@ public struct DampedHarmonicSpring {
 
     /// The damped natural frequency `ω_r`, measured in radians per second.
     fileprivate var dampedNaturalFrequency: CGFloat {
-        return self.undampedNaturalFrequency * sqrt(fabs(1 - pow(self.dampingRatio, 2)))
+        return self.undampedNaturalFrequency * sqrt(abs(1 - pow(self.dampingRatio, 2)))
     }
 
 
@@ -124,7 +124,7 @@ public struct DampedHarmonicSpring {
         let v_0 = initialVelocity
         let t = CGFloat(time)
 
-        if fabs(ζ - 1) < 1e-6 {
+        if abs(ζ - 1) < 1e-6 {
             let c_1 = s_0
             let c_2 = v_0 + λ * s_0
 
@@ -156,7 +156,7 @@ public struct DampedHarmonicSpring {
         let v_0 = initialVelocity
         let t: TimeInterval
 
-        if fabs(ζ - 1) < 1e-6 {
+        if abs(ζ - 1) < 1e-6 {
             t = TimeInterval(1 / λ)
         }
         else if ζ < 1 {
@@ -166,7 +166,7 @@ public struct DampedHarmonicSpring {
             t = TimeInterval(log((λ + ω_d) / (λ - ω_d)) / (2 * ω_d))
         }
 
-        return fabs(self.position(at: t, initialPosition: 0, initialVelocity: v_0))
+        return abs(self.position(at: t, initialPosition: 0, initialVelocity: v_0))
     }
 
 
@@ -213,7 +213,7 @@ public struct DampedHarmonicSpring {
         // A thousandth of the velocity is far less than the change in a single
         // frame and is therefore negligible regardless of the semantics of the
         // start and end values.
-        let epsilon = fabs(1e-3 * initialVelocity)
+        let epsilon = abs(1e-3 * initialVelocity)
         let relativeVelocity = self.relativeVelocity(forVelocity: initialVelocity, from: &currentValue, to: targetValue, epsilon: epsilon)
 
         return self.timingFunction(withRelativeInitialVelocity: relativeVelocity)
@@ -283,7 +283,7 @@ public struct DampedHarmonicSpring {
     private func relativeVelocity(forVelocity velocity: CGFloat, from currentValue: inout CGFloat, to targetValue: CGFloat, epsilon: CGFloat) -> CGFloat {
         precondition(epsilon > 0)
 
-        if fabs(targetValue - currentValue) >= epsilon {
+        if abs(targetValue - currentValue) >= epsilon {
             return velocity / (targetValue - currentValue)
         }
         else if self.maximumDisplacementFromEquilibrium(initialVelocity: velocity) >= 2 * epsilon {

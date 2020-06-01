@@ -233,10 +233,10 @@ internal class FacetimeViewController: UIViewController, UIGestureRecognizerDele
 
         // Reduce movement along the secondary axis of the gesture.
         if velocity.dx != 0 || velocity.dy != 0 {
-            let velocityInPrimaryDirection = fmax(fabs(velocity.dx), fabs(velocity.dy))
+            let velocityInPrimaryDirection = fmax(abs(velocity.dx), abs(velocity.dy))
 
-            velocity.dx *= fabs(velocity.dx / velocityInPrimaryDirection)
-            velocity.dy *= fabs(velocity.dy / velocityInPrimaryDirection)
+            velocity.dx *= abs(velocity.dx / velocityInPrimaryDirection)
+            velocity.dy *= abs(velocity.dy / velocityInPrimaryDirection)
         }
 
         let projectedPosition = UIGestureRecognizer.project(velocity, onto: currentPosition)
