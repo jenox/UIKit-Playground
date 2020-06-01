@@ -80,7 +80,7 @@ public struct DampedHarmonicSpring {
 
         self.mass = 1
         self.stiffness = pow(2 * .pi / frequencyResponse, 2) * self.mass
-        self.dampingCoefficient = 4 * .pi * dampingRatio * mass / frequencyResponse
+        self.dampingCoefficient = 4 * .pi * dampingRatio * self.mass / frequencyResponse
     }
 
     /// The unitless damping ratio `ζ`, i.e. the ratio of the actual damping
